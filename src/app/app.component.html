@@ -1,0 +1,39 @@
+<h1>array of users</h1>
+
+<div class="date" *ngFor="let date of dates">
+  {{ date }}
+</div>
+<br />
+
+<!-- show hide elements in angular -->
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>show or hide elements</h1>
+      <!---will create button with ternary operator and click function--->
+      <button (click)="onclick()" type="button" class="btn btn-danger">
+        {{ ReadMore ? 'Read More' : 'Read Less' }}
+      </button>
+
+      <!--will create if condition my default it will
+						b hide on click it will toggle--->
+      <ng-container *ngIf="visible">
+        <div class="bg-white shadow-sm p-3">
+          <h4>Hello World</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
+            tempore aut molestiae, unde non soluta! A, nesciunt. Earum facere
+            totam error, nam placeat, quia, veritatis aspernatur voluptate vitae
+            fugit odit.
+          </p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!-- write a code to disable a button -->
+<h1>disable a button</h1>
+
+<button disabled="{{ buttonDisabled }}">Click Me</button>
